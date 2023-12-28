@@ -744,7 +744,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
 </string>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
@@ -35839,6 +35839,23 @@ font: 12pt &quot;Arial Rounded MT Bold&quot;;</string>
           <attribute name="title">
            <string>Page</string>
           </attribute>
+          <layout class="QGridLayout" name="gridLayout_19">
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QStackedWidget" name="stackedWidget_2">
+             <widget class="QWidget" name="page_3"/>
+             <widget class="QWidget" name="page_4"/>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </widget>
        </item>
@@ -35850,7 +35867,7 @@ font: 12pt &quot;Arial Rounded MT Bold&quot;;</string>
  </widget>
  <resources>
   <include location="resources.qrc"/>
-  <include location="../../../../../engineering year2/semester2/Discrete Mathematics/project/project/resources.qrc"/>
+  <include location="resources.qrc"/>
  </resources>
  <connections/>
 </ui>

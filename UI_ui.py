@@ -26447,6 +26447,21 @@ class Ui_MainWindow(object):
         self.tabWidget.addTab(self.tab_2, "")
         self.tab_3 = QWidget()
         self.tab_3.setObjectName(u"tab_3")
+        self.gridLayout_19 = QGridLayout(self.tab_3)
+        self.gridLayout_19.setSpacing(0)
+        self.gridLayout_19.setObjectName(u"gridLayout_19")
+        self.gridLayout_19.setContentsMargins(-1, -1, 0, 0)
+        self.stackedWidget_2 = QStackedWidget(self.tab_3)
+        self.stackedWidget_2.setObjectName(u"stackedWidget_2")
+        self.page_3 = QWidget()
+        self.page_3.setObjectName(u"page_3")
+        self.stackedWidget_2.addWidget(self.page_3)
+        self.page_4 = QWidget()
+        self.page_4.setObjectName(u"page_4")
+        self.stackedWidget_2.addWidget(self.page_4)
+
+        self.gridLayout_19.addWidget(self.stackedWidget_2, 0, 0, 1, 1)
+
         self.tabWidget.addTab(self.tab_3, "")
 
         self.gridLayout_3.addWidget(self.tabWidget, 0, 0, 1, 1)
@@ -26458,7 +26473,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(2)
         self.tabWidget_2.setCurrentIndex(0)
         self.stackedWidget.setCurrentIndex(0)
 
