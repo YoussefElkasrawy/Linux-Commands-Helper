@@ -2,7 +2,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.uic import loadUiType
-from UI_ui import Ui_MainWindow as ui
+from UI import Ui_MainWindow as ui
 from pathlib import Path
 import resources_rc
 import subprocess
@@ -24,7 +24,7 @@ class MainApp(QMainWindow, ui):
         self.da_btn_clicked()
         self.tabWidget_2.setCurrentIndex(0)
         self.stackedWidget.setCurrentIndex(0)
-        # self.update_display()
+        self.update_display()
 
     def Handle_buttons(self):
         self.lch_pushButton.clicked.connect(lambda: self.lch_btn_clicked())
