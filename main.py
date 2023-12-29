@@ -230,6 +230,9 @@ class MainApp(QMainWindow, ui):
     def display_disk_usage(self):
         labels, sizes = self.get_disk_usage()
 
+        header = self.tableWidget.horizontalHeader()
+        header.setSectionResizeMode(0, QHeaderView.Stretch)
+        header.setSectionResizeMode(1, QHeaderView.Stretch)
         self.tableWidget.setColumnCount(2)
         self.tableWidget.setHorizontalHeaderLabels(["Partition", "Used Space"])
         self.tableWidget.setRowCount(len(labels))
