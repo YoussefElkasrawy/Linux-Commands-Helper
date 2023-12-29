@@ -1,36 +1,18 @@
-# -*- coding: utf-8 -*-
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
-################################################################################
-## Form generated from reading UI file 'UI.ui'
-##
-## Created by: Qt User Interface Compiler version 6.3.2
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
-
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QLabel,
-    QLineEdit, QMainWindow, QPushButton, QScrollArea,
-    QSizePolicy, QSpacerItem, QStackedWidget, QTabWidget,
-    QToolButton, QWidget)
-import resources_rc
 import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
+        if MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1200, 800)
         MainWindow.setMinimumSize(QSize(1200, 800))
         MainWindow.setMaximumSize(QSize(1200, 800))
         palette = QPalette()
-        brush = QBrush(QColor(255, 255, 255, 255))
+        brush = QBrush(QColor(0, 168, 132, 255))
         brush.setStyle(Qt.SolidPattern)
         palette.setBrush(QPalette.Active, QPalette.WindowText, brush)
         brush1 = QBrush(QColor(39, 39, 39, 255))
@@ -40,7 +22,7 @@ class Ui_MainWindow(object):
         palette.setBrush(QPalette.Active, QPalette.ButtonText, brush)
         palette.setBrush(QPalette.Active, QPalette.Base, brush1)
         palette.setBrush(QPalette.Active, QPalette.Window, brush1)
-        brush2 = QBrush(QColor(255, 255, 255, 128))
+        brush2 = QBrush(QColor(0, 168, 132, 128))
         brush2.setStyle(Qt.NoBrush)
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette.setBrush(QPalette.Active, QPalette.PlaceholderText, brush2)
@@ -51,7 +33,7 @@ class Ui_MainWindow(object):
         palette.setBrush(QPalette.Inactive, QPalette.ButtonText, brush)
         palette.setBrush(QPalette.Inactive, QPalette.Base, brush1)
         palette.setBrush(QPalette.Inactive, QPalette.Window, brush1)
-        brush3 = QBrush(QColor(255, 255, 255, 128))
+        brush3 = QBrush(QColor(0, 168, 132, 128))
         brush3.setStyle(Qt.NoBrush)
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush3)
@@ -62,7 +44,7 @@ class Ui_MainWindow(object):
         palette.setBrush(QPalette.Disabled, QPalette.ButtonText, brush)
         palette.setBrush(QPalette.Disabled, QPalette.Base, brush1)
         palette.setBrush(QPalette.Disabled, QPalette.Window, brush1)
-        brush4 = QBrush(QColor(255, 255, 255, 128))
+        brush4 = QBrush(QColor(0, 168, 132, 128))
         brush4.setStyle(Qt.NoBrush)
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush4)
@@ -74,16 +56,14 @@ class Ui_MainWindow(object):
         MainWindow.setWindowIcon(icon)
         MainWindow.setAutoFillBackground(False)
         MainWindow.setStyleSheet(u"background-color: rgb(39, 39, 39);\n"
-"color: rgb(255, 255, 255);\n"
+"color: #00a884;\n"
 "\n"
 "")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"font: 63 11pt \"Yu Gothic UI Semibold\";")
-        self.gridLayout = QGridLayout(self.centralwidget)
-        self.gridLayout.setSpacing(0)
-        self.gridLayout.setObjectName(u"gridLayout")
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_20 = QGridLayout(self.centralwidget)
+        self.gridLayout_20.setObjectName(u"gridLayout_20")
         self.frame = QFrame(self.centralwidget)
         self.frame.setObjectName(u"frame")
         self.frame.setMinimumSize(QSize(100, 0))
@@ -169,7 +149,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.addWidget(self.da_pushButton, 0, 0, 1, 1)
 
 
-        self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
+        self.gridLayout_20.addWidget(self.frame, 0, 0, 1, 1)
 
         self.frame_2 = QFrame(self.centralwidget)
         self.frame_2.setObjectName(u"frame_2")
@@ -449,6 +429,28 @@ class Ui_MainWindow(object):
 "   background-color: #222222;\n"
 "	\n"
 "}\n"
+"QTableWidget {\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QTableWidget QHeaderView::section {\n"
+"    background-color: #00a884;\n"
+"    color: white;\n"
+"    padding: 5px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QTableWidget::item {\n"
+"    border: 1px solid #222222;\n"
+"    padding: 5px;\n"
+"    font: 12pt \"Arial Rounded MT Bold\";\n"
+"}\n"
+"\n"
+"QTableWidget::item:selected {\n"
+"    background-color: #404040;\n"
+"  "
+                        "  color: white;\n"
+"}\n"
 "")
         self.tab = QWidget()
         self.tab.setObjectName(u"tab")
@@ -510,7 +512,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 982, 4440))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 958, 4440))
         self.gridLayout_6 = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_6.setSpacing(10)
         self.gridLayout_6.setObjectName(u"gridLayout_6")
@@ -7668,7 +7670,7 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 982, 4230))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 958, 4230))
         self.gridLayout_8 = QGridLayout(self.scrollAreaWidgetContents_2)
         self.gridLayout_8.setSpacing(10)
         self.gridLayout_8.setObjectName(u"gridLayout_8")
@@ -14442,7 +14444,7 @@ class Ui_MainWindow(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 982, 3280))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 958, 3280))
         self.gridLayout_10 = QGridLayout(self.scrollAreaWidgetContents_3)
         self.gridLayout_10.setSpacing(10)
         self.gridLayout_10.setObjectName(u"gridLayout_10")
@@ -19580,7 +19582,7 @@ class Ui_MainWindow(object):
         self.scrollArea_4.setWidgetResizable(True)
         self.scrollAreaWidgetContents_4 = QWidget()
         self.scrollAreaWidgetContents_4.setObjectName(u"scrollAreaWidgetContents_4")
-        self.scrollAreaWidgetContents_4.setGeometry(QRect(0, 0, 982, 4020))
+        self.scrollAreaWidgetContents_4.setGeometry(QRect(0, 0, 958, 4020))
         self.gridLayout_12 = QGridLayout(self.scrollAreaWidgetContents_4)
         self.gridLayout_12.setSpacing(10)
         self.gridLayout_12.setObjectName(u"gridLayout_12")
@@ -26447,33 +26449,166 @@ class Ui_MainWindow(object):
         self.tabWidget.addTab(self.tab_2, "")
         self.tab_3 = QWidget()
         self.tab_3.setObjectName(u"tab_3")
-        self.gridLayout_19 = QGridLayout(self.tab_3)
-        self.gridLayout_19.setSpacing(0)
+        self.gridLayout = QGridLayout(self.tab_3)
+        self.gridLayout.setSpacing(0)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.frame_6 = QFrame(self.tab_3)
+        self.frame_6.setObjectName(u"frame_6")
+        self.frame_6.setFrameShape(QFrame.StyledPanel)
+        self.frame_6.setFrameShadow(QFrame.Raised)
+        self.gridLayout_19 = QGridLayout(self.frame_6)
+        self.gridLayout_19.setSpacing(25)
         self.gridLayout_19.setObjectName(u"gridLayout_19")
-        self.gridLayout_19.setContentsMargins(-1, -1, 0, 0)
-        self.stackedWidget_2 = QStackedWidget(self.tab_3)
-        self.stackedWidget_2.setObjectName(u"stackedWidget_2")
-        self.page_3 = QWidget()
-        self.page_3.setObjectName(u"page_3")
-        self.stackedWidget_2.addWidget(self.page_3)
-        self.page_4 = QWidget()
-        self.page_4.setObjectName(u"page_4")
-        self.stackedWidget_2.addWidget(self.page_4)
+        self.gridLayout_19.setContentsMargins(25, 25, 25, 25)
+        self.tableWidget = QTableWidget(self.frame_6)
+        if (self.tableWidget.columnCount() < 2):
+            self.tableWidget.setColumnCount(2)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        if (self.tableWidget.rowCount() < 2):
+            self.tableWidget.setRowCount(2)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem3)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.tableWidget.setItem(0, 0, __qtablewidgetitem4)
+        __qtablewidgetitem5 = QTableWidgetItem()
+        self.tableWidget.setItem(0, 1, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.tableWidget.setItem(1, 0, __qtablewidgetitem6)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        self.tableWidget.setItem(1, 1, __qtablewidgetitem7)
+        self.tableWidget.setObjectName(u"tableWidget")
 
-        self.gridLayout_19.addWidget(self.stackedWidget_2, 0, 0, 1, 1)
+        self.gridLayout_19.addWidget(self.tableWidget, 0, 0, 1, 1)
+
+
+        self.gridLayout.addWidget(self.frame_6, 1, 0, 1, 1)
+
+        self.frame_5 = QFrame(self.tab_3)
+        self.frame_5.setObjectName(u"frame_5")
+        self.frame_5.setMinimumSize(QSize(0, 200))
+        self.frame_5.setFrameShape(QFrame.StyledPanel)
+        self.frame_5.setFrameShadow(QFrame.Raised)
+        self.gridLayout_24 = QGridLayout(self.frame_5)
+        self.gridLayout_24.setSpacing(20)
+        self.gridLayout_24.setObjectName(u"gridLayout_24")
+        self.gridLayout_24.setContentsMargins(25, 25, 25, 25)
+        self.frame_7 = QFrame(self.frame_5)
+        self.frame_7.setObjectName(u"frame_7")
+        self.frame_7.setStyleSheet(u"QFrame\n"
+"{\n"
+"background-color: #303030;\n"
+"border-style: solid;\n"
+"border-top-color: transparent;\n"
+"border-right-color: transparent;\n"
+"border-left-color: transparent;\n"
+"border-bottom-color: transparent;\n"
+"border-width: 0px;\n"
+"border-radius: 10px;\n"
+"}")
+        self.frame_7.setFrameShape(QFrame.StyledPanel)
+        self.frame_7.setFrameShadow(QFrame.Raised)
+        self.gridLayout_21 = QGridLayout(self.frame_7)
+        self.gridLayout_21.setObjectName(u"gridLayout_21")
+        self.label = QLabel(self.frame_7)
+        self.label.setObjectName(u"label")
+        self.label.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_21.addWidget(self.label, 0, 0, 1, 1)
+
+        self.label_2 = QLabel(self.frame_7)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_21.addWidget(self.label_2, 1, 0, 1, 1)
+
+
+        self.gridLayout_24.addWidget(self.frame_7, 0, 0, 1, 1)
+
+        self.frame_10 = QFrame(self.frame_5)
+        self.frame_10.setObjectName(u"frame_10")
+        self.frame_10.setStyleSheet(u"QFrame\n"
+"{\n"
+"background-color: #303030;\n"
+"border-style: solid;\n"
+"border-top-color: transparent;\n"
+"border-right-color: transparent;\n"
+"border-left-color: transparent;\n"
+"border-bottom-color: transparent;\n"
+"border-width: 0px;\n"
+"border-radius: 10px;\n"
+"}")
+        self.frame_10.setFrameShape(QFrame.StyledPanel)
+        self.frame_10.setFrameShadow(QFrame.Raised)
+        self.gridLayout_23 = QGridLayout(self.frame_10)
+        self.gridLayout_23.setObjectName(u"gridLayout_23")
+        self.label_5 = QLabel(self.frame_10)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_23.addWidget(self.label_5, 0, 0, 1, 1)
+
+        self.label_7 = QLabel(self.frame_10)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_23.addWidget(self.label_7, 1, 0, 1, 1)
+
+
+        self.gridLayout_24.addWidget(self.frame_10, 0, 1, 1, 1)
+
+        self.frame_9 = QFrame(self.frame_5)
+        self.frame_9.setObjectName(u"frame_9")
+        self.frame_9.setStyleSheet(u"QFrame\n"
+"{\n"
+"background-color: #303030;\n"
+"border-style: solid;\n"
+"border-top-color: transparent;\n"
+"border-right-color: transparent;\n"
+"border-left-color: transparent;\n"
+"border-bottom-color: transparent;\n"
+"border-width: 0px;\n"
+"border-radius: 10px;\n"
+"}")
+        self.frame_9.setFrameShape(QFrame.StyledPanel)
+        self.frame_9.setFrameShadow(QFrame.Raised)
+        self.gridLayout_22 = QGridLayout(self.frame_9)
+        self.gridLayout_22.setObjectName(u"gridLayout_22")
+        self.label_3 = QLabel(self.frame_9)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_22.addWidget(self.label_3, 0, 0, 1, 1)
+
+        self.label_4 = QLabel(self.frame_9)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_22.addWidget(self.label_4, 1, 0, 1, 1)
+
+
+        self.gridLayout_24.addWidget(self.frame_9, 0, 2, 1, 1)
+
+
+        self.gridLayout.addWidget(self.frame_5, 0, 0, 1, 1)
 
         self.tabWidget.addTab(self.tab_3, "")
 
         self.gridLayout_3.addWidget(self.tabWidget, 0, 0, 1, 1)
 
 
-        self.gridLayout.addWidget(self.frame_2, 0, 1, 1, 1)
+        self.gridLayout_20.addWidget(self.frame_2, 0, 1, 1, 1)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(0)
         self.tabWidget_2.setCurrentIndex(0)
         self.stackedWidget.setCurrentIndex(0)
 
@@ -27481,6 +27616,33 @@ class Ui_MainWindow(object):
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"drop file here to decrypt it", None))
         self.toolButton_5.setText(QCoreApplication.translate("MainWindow", u"Decrypt", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Tab 2", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"New Column", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"New Column", None));
+        ___qtablewidgetitem2 = self.tableWidget.verticalHeaderItem(0)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"1", None));
+        ___qtablewidgetitem3 = self.tableWidget.verticalHeaderItem(1)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"2", None));
+
+        __sortingEnabled = self.tableWidget.isSortingEnabled()
+        self.tableWidget.setSortingEnabled(False)
+        ___qtablewidgetitem4 = self.tableWidget.item(0, 0)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"ilbbilwdibwd", None));
+        ___qtablewidgetitem5 = self.tableWidget.item(0, 1)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"bidlb", None));
+        ___qtablewidgetitem6 = self.tableWidget.item(1, 0)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"dbiq", None));
+        ___qtablewidgetitem7 = self.tableWidget.item(1, 1)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"aojosqj", None));
+        self.tableWidget.setSortingEnabled(__sortingEnabled)
+
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Total Disk Space", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Used Space", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Free Space", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"Page", None))
     # retranslateUi
 

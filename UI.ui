@@ -28,9 +28,9 @@
      <colorrole role="WindowText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>168</green>
+        <blue>132</blue>
        </color>
       </brush>
      </colorrole>
@@ -46,18 +46,18 @@
      <colorrole role="Text">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>168</green>
+        <blue>132</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="ButtonText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>168</green>
+        <blue>132</blue>
        </color>
       </brush>
      </colorrole>
@@ -82,9 +82,9 @@
      <colorrole role="PlaceholderText">
       <brush brushstyle="NoBrush">
        <color alpha="128">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>168</green>
+        <blue>132</blue>
        </color>
       </brush>
      </colorrole>
@@ -93,9 +93,9 @@
      <colorrole role="WindowText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>168</green>
+        <blue>132</blue>
        </color>
       </brush>
      </colorrole>
@@ -111,18 +111,18 @@
      <colorrole role="Text">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>168</green>
+        <blue>132</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="ButtonText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>168</green>
+        <blue>132</blue>
        </color>
       </brush>
      </colorrole>
@@ -147,9 +147,9 @@
      <colorrole role="PlaceholderText">
       <brush brushstyle="NoBrush">
        <color alpha="128">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>168</green>
+        <blue>132</blue>
        </color>
       </brush>
      </colorrole>
@@ -158,9 +158,9 @@
      <colorrole role="WindowText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>168</green>
+        <blue>132</blue>
        </color>
       </brush>
      </colorrole>
@@ -176,18 +176,18 @@
      <colorrole role="Text">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>168</green>
+        <blue>132</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="ButtonText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>168</green>
+        <blue>132</blue>
        </color>
       </brush>
      </colorrole>
@@ -212,9 +212,9 @@
      <colorrole role="PlaceholderText">
       <brush brushstyle="NoBrush">
        <color alpha="128">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>168</green>
+        <blue>132</blue>
        </color>
       </brush>
      </colorrole>
@@ -236,7 +236,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(39, 39, 39);
-color: rgb(255, 255, 255);
+color: #00a884;
 
 </string>
   </property>
@@ -244,22 +244,7 @@ color: rgb(255, 255, 255);
    <property name="styleSheet">
     <string notr="true">font: 63 11pt &quot;Yu Gothic UI Semibold&quot;;</string>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <property name="leftMargin">
-     <number>0</number>
-    </property>
-    <property name="topMargin">
-     <number>0</number>
-    </property>
-    <property name="rightMargin">
-     <number>0</number>
-    </property>
-    <property name="bottomMargin">
-     <number>0</number>
-    </property>
-    <property name="spacing">
-     <number>0</number>
-    </property>
+   <layout class="QGridLayout" name="gridLayout_20">
     <item row="0" column="0">
      <widget class="QFrame" name="frame">
       <property name="minimumSize">
@@ -741,10 +726,31 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
    background-color: #222222;
 	
 }
+QTableWidget {
+    border: none;
+}
+
+QTableWidget QHeaderView::section {
+    background-color: #00a884;
+    color: white;
+    padding: 5px;
+    border: none;
+}
+
+QTableWidget::item {
+    border: 1px solid #222222;
+    padding: 5px;
+    font: 12pt &quot;Arial Rounded MT Bold&quot;;
+}
+
+QTableWidget::item:selected {
+    background-color: #404040;
+    color: white;
+}
 </string>
          </property>
          <property name="currentIndex">
-          <number>2</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
@@ -883,7 +889,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>982</width>
+                    <width>958</width>
                     <height>4440</height>
                    </rect>
                   </property>
@@ -10446,7 +10452,7 @@ font: 12pt &quot;Arial Rounded MT Bold&quot;;</string>
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>982</width>
+                    <width>958</width>
                     <height>4230</height>
                    </rect>
                   </property>
@@ -19436,7 +19442,7 @@ font: 12pt &quot;Arial Rounded MT Bold&quot;;</string>
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>982</width>
+                    <width>958</width>
                     <height>3280</height>
                    </rect>
                   </property>
@@ -26341,7 +26347,7 @@ font: 12pt &quot;Arial Rounded MT Bold&quot;;</string>
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>982</width>
+                    <width>958</width>
                     <height>4020</height>
                    </rect>
                   </property>
@@ -35839,7 +35845,13 @@ font: 12pt &quot;Arial Rounded MT Bold&quot;;</string>
           <attribute name="title">
            <string>Page</string>
           </attribute>
-          <layout class="QGridLayout" name="gridLayout_19">
+          <layout class="QGridLayout" name="gridLayout">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
            <property name="rightMargin">
             <number>0</number>
            </property>
@@ -35849,10 +35861,243 @@ font: 12pt &quot;Arial Rounded MT Bold&quot;;</string>
            <property name="spacing">
             <number>0</number>
            </property>
+           <item row="1" column="0">
+            <widget class="QFrame" name="frame_6">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_19">
+              <property name="leftMargin">
+               <number>25</number>
+              </property>
+              <property name="topMargin">
+               <number>25</number>
+              </property>
+              <property name="rightMargin">
+               <number>25</number>
+              </property>
+              <property name="bottomMargin">
+               <number>25</number>
+              </property>
+              <property name="spacing">
+               <number>25</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QTableWidget" name="tableWidget">
+                <row>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>2</string>
+                 </property>
+                </row>
+                <column>
+                 <property name="text">
+                  <string>New Column</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>New Column</string>
+                 </property>
+                </column>
+                <item row="0" column="0">
+                 <property name="text">
+                  <string>ilbbilwdibwd</string>
+                 </property>
+                </item>
+                <item row="0" column="1">
+                 <property name="text">
+                  <string>bidlb</string>
+                 </property>
+                </item>
+                <item row="1" column="0">
+                 <property name="text">
+                  <string>dbiq</string>
+                 </property>
+                </item>
+                <item row="1" column="1">
+                 <property name="text">
+                  <string>aojosqj</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
            <item row="0" column="0">
-            <widget class="QStackedWidget" name="stackedWidget_2">
-             <widget class="QWidget" name="page_3"/>
-             <widget class="QWidget" name="page_4"/>
+            <widget class="QFrame" name="frame_5">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>200</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_24">
+              <property name="leftMargin">
+               <number>25</number>
+              </property>
+              <property name="topMargin">
+               <number>25</number>
+              </property>
+              <property name="rightMargin">
+               <number>25</number>
+              </property>
+              <property name="bottomMargin">
+               <number>25</number>
+              </property>
+              <property name="spacing">
+               <number>20</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QFrame" name="frame_7">
+                <property name="styleSheet">
+                 <string notr="true">QFrame
+{
+background-color: #303030;
+border-style: solid;
+border-top-color: transparent;
+border-right-color: transparent;
+border-left-color: transparent;
+border-bottom-color: transparent;
+border-width: 0px;
+border-radius: 10px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_21">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label">
+                   <property name="text">
+                    <string>Total Disk Space</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_2">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QFrame" name="frame_10">
+                <property name="styleSheet">
+                 <string notr="true">QFrame
+{
+background-color: #303030;
+border-style: solid;
+border-top-color: transparent;
+border-right-color: transparent;
+border-left-color: transparent;
+border-bottom-color: transparent;
+border-width: 0px;
+border-radius: 10px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_23">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_5">
+                   <property name="text">
+                    <string>Used Space</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_7">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QFrame" name="frame_9">
+                <property name="styleSheet">
+                 <string notr="true">QFrame
+{
+background-color: #303030;
+border-style: solid;
+border-top-color: transparent;
+border-right-color: transparent;
+border-left-color: transparent;
+border-bottom-color: transparent;
+border-width: 0px;
+border-radius: 10px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_22">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_3">
+                   <property name="text">
+                    <string>Free Space</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_4">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
