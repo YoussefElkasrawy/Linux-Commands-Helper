@@ -3,10 +3,11 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.uic import loadUiType
 from UI_ui import Ui_MainWindow as ui
+from pathlib import Path
 import resources_rc
 import subprocess
 import sys
-
+import os
 
 class MainApp(QMainWindow, ui):
     def __init__(self):
@@ -188,11 +189,12 @@ class MainApp(QMainWindow, ui):
         self.tabWidget.setCurrentIndex(2)
 
     def execute_command(self, command):
-        print("command", command)
         try:
             subprocess.run(command, shell=True, check=True)
         except subprocess.CalledProcessError as e:
-            print(f"Error executing command: {e}")
+            QMessageBox.information(
+                self, "Error executing command", f"Y{e}"
+            )
 
     def update_display(self):
         self.display_disk_usage()
@@ -235,8 +237,8 @@ class MainApp(QMainWindow, ui):
         for i, label in enumerate(labels):
             partition_item = QTableWidgetItem(label)
             size_item = QTableWidgetItem(self.format_size(sizes[i]))
-            self.table.setItem(i, 0, partition_item)
-            self.table.setItem(i, 1, size_item)
+            self.tableWidget.setItem(i, 0, partition_item)
+            self.tableWidget.setItem(i, 1, size_item)
 
     def format_size(self, size):
         for unit in ["B", "KB", "MB", "GB", "TB"]:
