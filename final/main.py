@@ -3,6 +3,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.uic import loadUiType
 from UI import Ui_MainWindow as ui
+from cryptography.fernet import Fernet
 from pathlib import Path
 import resources_rc
 import subprocess
@@ -24,7 +25,8 @@ class MainApp(QMainWindow, ui):
         self.da_btn_clicked()
         self.tabWidget_2.setCurrentIndex(0)
         self.stackedWidget.setCurrentIndex(0)
-        self.update_display()
+        self.Encrypt_Decrypt_File_file_name = "#"
+        #self.update_display()
 
     def Handle_buttons(self):
         self.lch_pushButton.clicked.connect(lambda: self.lch_btn_clicked())
@@ -36,6 +38,11 @@ class MainApp(QMainWindow, ui):
         self.btn3.clicked.connect(lambda: self.tabWidget_2.setCurrentIndex(3))
         self.btn_enc.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
         self.btn_dec.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(1))
+        self.toolButton_4.clicked.connect(lambda: self.encrypt_file())
+        self.toolButton_5.clicked.connect(lambda: self.decrypt_file())
+        self.toolButton_219.clicked.connect(
+            lambda: self.copyToClipboard(str(self.lineEdit.text()))
+        )
 
     def Handle_CLH_buttons(self):
         self.toolButton_35.clicked.connect(
@@ -256,6 +263,78 @@ class MainApp(QMainWindow, ui):
             if size < 1024.0:
                 return f"{size:.2f} {unit}"
             size /= 1024.0
+            
+    ## ---------- Start Encrypt & Decrypt File ----------##
+    def dragEnterEvent(self, event):
+        if event.mimeData().hasImage:
+            event.acceptProposedAction()
+        else:
+            event.ignore()
+
+    def dragMoveEvent(self, event):
+        if event.mimeData().hasImage:
+            event.acceptProposedAction()
+        else:
+            event.ignore()
+
+    def dropEvent(self, event):
+        if event.mimeData().hasImage:
+            event.setDropAction(Qt.CopyAction)
+            file_path = event.mimeData().urls()[0].toLocalFile()
+            self.Encrypt_Decrypt_File_file_name = file_path
+            self.label_6.setText("file selected")
+            self.label_16.setText("file selected")
+            event.accept()
+        else:
+            event.ignore()
+
+    def encrypt_file(self):
+        if self.Encrypt_Decrypt_File_file_name == "#":
+            QMessageBox.information(self, "Error", "Please select file")
+        else:
+            file_path = self.Encrypt_Decrypt_File_file_name
+            # Generate a random key
+            key = Fernet.generate_key()
+
+            # Encrypt the file
+            with open(file_path, "rb") as f:
+                data = f.read()
+            encrypted_data = Fernet(key).encrypt(data)
+
+            # Save the encrypted file
+            with open(file_path + ".encrypted", "wb") as f:
+                f.write(encrypted_data)
+
+            self.lineEdit.setText(str(key.decode("utf-8")))
+            self.label_6.setText("drop file here to encrypt it")
+            self.label_16.setText("drop file here to decrypt it")
+            self.Encrypt_Decrypt_File_file_name = "#"
+
+    def decrypt_file(self):
+        if self.Encrypt_Decrypt_File_file_name == "#":
+            QMessageBox.information(self, "Error", "Please select file")
+        else:
+            file_path = self.Encrypt_Decrypt_File_file_name
+            key = self.lineEdit_7.text()
+            if key == "":
+                QMessageBox.information(self, "Error", "Please enter the key")
+            else:
+                # Open the encrypted file
+                with open(file_path, "rb") as f:
+                    encrypted_data = f.read()
+
+                # Decrypt the file
+                decrypted_data = Fernet(key).decrypt(encrypted_data)
+
+                # Save the decrypted file
+                with open(file_path[:-10], "wb") as f:
+                    f.write(decrypted_data)
+                self.label_6.setText("drop file here to encrypt it")
+                self.label_16.setText("drop file here to decrypt it")
+                self.Encrypt_Decrypt_File_file_name = "#"
+                self.lineEdit_7.setText("")
+                
+    ## ---------- End Encrypt & Decrypt File ----------##
 
 
 def main():
