@@ -26483,7 +26483,7 @@ class Ui_MainWindow(object):
         __qtablewidgetitem7 = QTableWidgetItem()
         self.tableWidget.setItem(1, 1, __qtablewidgetitem7)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.horizontalHeader().setVisible(False)
+        self.tableWidget.horizontalHeader().setVisible(True)
         self.tableWidget.horizontalHeader().setHighlightSections(True)
         self.tableWidget.horizontalHeader().setProperty("showSortIndicator", False)
         self.tableWidget.horizontalHeader().setStretchLastSection(False)
