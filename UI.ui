@@ -28,9 +28,9 @@
      <colorrole role="WindowText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>168</green>
-        <blue>132</blue>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
@@ -46,18 +46,18 @@
      <colorrole role="Text">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>168</green>
-        <blue>132</blue>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="ButtonText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>168</green>
-        <blue>132</blue>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
@@ -82,9 +82,9 @@
      <colorrole role="PlaceholderText">
       <brush brushstyle="NoBrush">
        <color alpha="128">
-        <red>0</red>
-        <green>168</green>
-        <blue>132</blue>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
@@ -93,9 +93,9 @@
      <colorrole role="WindowText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>168</green>
-        <blue>132</blue>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
@@ -111,18 +111,18 @@
      <colorrole role="Text">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>168</green>
-        <blue>132</blue>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="ButtonText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>168</green>
-        <blue>132</blue>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
@@ -147,9 +147,9 @@
      <colorrole role="PlaceholderText">
       <brush brushstyle="NoBrush">
        <color alpha="128">
-        <red>0</red>
-        <green>168</green>
-        <blue>132</blue>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
@@ -158,9 +158,9 @@
      <colorrole role="WindowText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>168</green>
-        <blue>132</blue>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
@@ -176,18 +176,18 @@
      <colorrole role="Text">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>168</green>
-        <blue>132</blue>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="ButtonText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>168</green>
-        <blue>132</blue>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
@@ -212,9 +212,9 @@
      <colorrole role="PlaceholderText">
       <brush brushstyle="NoBrush">
        <color alpha="128">
-        <red>0</red>
-        <green>168</green>
-        <blue>132</blue>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
@@ -235,8 +235,9 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(39, 39, 39);
-color: #00a884;
+   <string notr="true">font: 13pt &quot;Arial Rounded MT Bold&quot;;
+background-color: rgb(39, 39, 39);
+color: rgb(255, 255, 255);
 
 </string>
   </property>
@@ -750,7 +751,7 @@ QTableWidget::item:selected {
 </string>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
@@ -35887,6 +35888,21 @@ font: 12pt &quot;Arial Rounded MT Bold&quot;;</string>
               </property>
               <item row="0" column="0">
                <widget class="QTableWidget" name="tableWidget">
+                <attribute name="horizontalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="horizontalHeaderHighlightSections">
+                 <bool>true</bool>
+                </attribute>
+                <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="horizontalHeaderStretchLastSection">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="verticalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
                 <row>
                  <property name="text">
                   <string>1</string>
@@ -35975,6 +35991,7 @@ border-left-color: transparent;
 border-bottom-color: transparent;
 border-width: 0px;
 border-radius: 10px;
+font: 13pt &quot;Arial Rounded MT Bold&quot;;
 }</string>
                 </property>
                 <property name="frameShape">
@@ -36020,6 +36037,7 @@ border-left-color: transparent;
 border-bottom-color: transparent;
 border-width: 0px;
 border-radius: 10px;
+font: 13pt &quot;Arial Rounded MT Bold&quot;;
 }</string>
                 </property>
                 <property name="frameShape">
@@ -36065,6 +36083,7 @@ border-left-color: transparent;
 border-bottom-color: transparent;
 border-width: 0px;
 border-radius: 10px;
+font: 13pt &quot;Arial Rounded MT Bold&quot;;
 }</string>
                 </property>
                 <property name="frameShape">

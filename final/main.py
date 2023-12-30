@@ -26,7 +26,7 @@ class MainApp(QMainWindow, ui):
         self.tabWidget_2.setCurrentIndex(0)
         self.stackedWidget.setCurrentIndex(0)
         self.Encrypt_Decrypt_File_file_name = "#"
-        #self.update_display()
+        self.update_display()
 
     def Handle_buttons(self):
         self.lch_pushButton.clicked.connect(lambda: self.lch_btn_clicked())

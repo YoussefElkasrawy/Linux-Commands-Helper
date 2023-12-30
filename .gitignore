@@ -1,0 +1,5 @@
+images/
+__pycache__/
+main.py
+resources_rc.py
+UI_ui.py
