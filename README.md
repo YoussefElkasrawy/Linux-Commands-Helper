@@ -18,9 +18,9 @@ The Linux Solutions GUI is developed using the Python programming language withi
 
 ## Features
 
-1. **Storage Analyzer**: Visualizes disk space usage, providing insights into occupied storage and free space.
-2. **Linux Command Helper**: Categorizes common commands into file management, networking, process management, and user management categories, aiding users in executing commands effectively.
-3. **Encryption/Decryption File System**: Enhances data security by allowing users to encrypt or decrypt files with a user-provided key.
+![Storage Analyzer](storage_analyzer.png)
+![Linux Command Helper](command_helper.png)
+![Encryption/Decryption File System](encryption_decryption.png)
 
 ## Future Enhancements
 
