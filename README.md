@@ -28,7 +28,8 @@ In our pursuit of continuous improvement, we envision several enhancements to fu
 
 ## Results
 
-![Storage Analyzer](storage_analyzer.png)
+![Storage Analyzer](![image](https://github.com/YoussefElkasrawy/Linux-Commands-Helper/assets/88799378/ee5fcd4d-e709-489b-b47c-8f635a0b27fe)
+)
 ![Linux Command Helper](command_helper.png)
 ![Encryption/Decryption File System](encryption_decryption.png)
 
